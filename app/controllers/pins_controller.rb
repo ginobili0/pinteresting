@@ -5,7 +5,7 @@ class PinsController < ApplicationController
   # instead of except we can also use only as mentioned in the upper line and mention all the pages for which we want users to be authenticated
 
   def index
-    @pins = Pin.all
+    @pins = Pin.all.order 'created_at DESC'
   end
 
   def show
